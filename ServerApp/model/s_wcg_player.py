@@ -17,10 +17,10 @@ class s_wcg_player(db.Model):
     ball_6 = db.Column(db.Integer)
     ball_7 = db.Column(db.Integer)
     ball_8 = db.Column(db.Integer)
+    curSkin = db.Column(db.Integer)
 
 
-
-    def __init__(self,wxid,name,head,bestScore,bestCombo,coin,ball_1,ball_2,ball_3,ball_4,ball_5,ball_6,ball_7,ball_8):
+    def __init__(self,wxid,name,head,bestScore,bestCombo,coin,ball_1,ball_2,ball_3,ball_4,ball_5,ball_6,ball_7,ball_8,curSkin):
         self.wxid = wxid
         self.name = name
         self.head = head
@@ -35,6 +35,7 @@ class s_wcg_player(db.Model):
         self.ball_6 = ball_6
         self.ball_7 = ball_7
         self.ball_8 = ball_8
+        self.curSkin = curSkin
 
     def __repr__(self):
         return '<s_wcg_player %r>' % self.id
